@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujju-BhaiLang Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Gujju-BhaiLang Playground</h1>
+            </div>
+            <div class="header-links">
+                <a href="index.html" class="header-link">Home</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="mode-toggle">
+                <button class="toggle-btn active" data-mode="simple">Sado Code</button>
+                <button class="toggle-btn" data-mode="abusive">Maja Vado Code</button>
+            </div>
+
+            <div class="playground-section">
+                <div class="code-editor">
+                    <div class="editor-header">
+                        <span>Code</span>
+                        <button id="clearBtn">Clear</button>
+                    </div>
+                    <textarea id="codeEditor" placeholder="Write your Gujju-BhaiLang code here...">start:
+  print: "Kem cho bhai!"
+  umar = 25
+  jo (umar > 18) to {
+    print: "Tame adult cho"
+  }
+end:</textarea>
+                </div>
+                
+                <div class="output-section">
+                    <div class="output-header">
+                        <span>Output</span>
+                        <button id="runBtn">Run</button>
+                    </div>
+                    <div id="output" class="output"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with ❤️ by <a href="https://github.com/DDharm007" target="_blank">@DDharm007</a></p>
+        </footer>
+    </div>
+
+    <script src="interpreter.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

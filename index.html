@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujju-BhaiLang</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Gujju-BhaiLang</h1>
+            </div>
+            <p class="tagline">A toy programming language inspired by Gujarati culture</p>
+        </header>
+
+        <main>
+            <div class="playground-toggle">
+                <button class="toggle-btn active" data-mode="simple">Sado Code</button>
+                <button class="toggle-btn" data-mode="abusive">Maja Vado Code</button>
+            </div>
+
+            <div class="demo-section">
+                <div class="code-preview">
+                    <div class="preview-header">
+                        <span>Sample Code</span>
+                    </div>
+                    <div class="code-display simple-mode">
+                        <pre><code><span class="keyword">start:</span>
+  <span class="keyword">print:</span> <span class="string">"Kem cho bhai!"</span>
+  <span class="variable">umar</span> = <span class="number">25</span>
+  <span class="keyword">jo</span> (<span class="variable">umar</span> > <span class="number">18</span>) <span class="keyword">to</span> {
+    <span class="keyword">print:</span> <span class="string">"Tame adult cho"</span>
+  }
+<span class="keyword">end:</span></code></pre>
+                    </div>
+                    <div class="code-display abusive-mode">
+                        <pre><code><span class="keyword">sharu:</span>
+  <span class="keyword">lakh chodya:</span> <span class="string">"Kem cho loda!"</span>
+  <span class="keyword">loda ayia nakh</span> <span class="variable">umar</span> = <span class="number">25</span>
+  <span class="keyword">jo</span> (<span class="variable">umar</span> > <span class="number">18</span>) <span class="keyword">to</span> {
+    <span class="keyword">lakh chodya:</span> <span class="string">"Bhos, tame mota cho"</span>
+  }
+<span class="keyword">samaapt:</span></code></pre>
+                    </div>
+                </div>
+                
+                <div class="playground-cta">
+                    <a href="playground.html" class="playground-btn">
+                        <span>Go to Playground</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <section class="docs-content">
+            <div class="doc-section">
+                <h2>General</h2>
+                <p>Gujju-BhaiLang is a toy programming language inspired by Gujarati culture. Every program must start with <span class="highlight">start:</span> and end with <span class="highlight">end:</span> in simple mode, or <span class="highlight">sharu:</span> and <span class="highlight">samaapt:</span> in abusive mode. Anything outside of it will be ignored.</p>
+                
+                <div class="code-example simple-mode">
+                    <pre><code>This will be ignored
+start:
+  // Write code here
+end:
+This too</code></pre>
+                </div>
+                <div class="code-example abusive-mode">
+                    <pre><code>This will be ignored
+sharu:
+  // Write code here
+samaapt:
+This too</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h2>Variables</h2>
+                <p>Variables can be declared using simple assignment in simple mode, or <span class="highlight">loda ayia nakh</span> in abusive mode.</p>
+                
+                <div class="code-example simple-mode">
+                    <pre><code>start:
+  umar = 25;
+  naam = "Bhai";
+  sachu = true;
+  umar = umar + 1;
+  naam = "New Name";
+end:</code></pre>
+                </div>
+                <div class="code-example abusive-mode">
+                    <pre><code>sharu:
+  loda ayia nakh umar = 25;
+  loda ayia nakh naam = "Bhai";
+  loda ayia nakh sachu = true;
+  umar = umar + 1;
+  naam = "New Name";
+samaapt:</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h2>Types</h2>
+                <p>Numbers and strings are like other languages. Null values can be denoted using <span class="highlight">nalla</span>. <span class="highlight">sachu</span> and <span class="highlight">khotu</span> are the boolean values.</p>
+                
+                <div class="code-example simple-mode">
+                    <pre><code>start:
+  umar = 25;
+  total = 10 + (15 * 20);
+  naam = "Bhai";
+  char = 'a';
+  empty = nalla;
+  flag = sachu;
+  wrong = khotu;
+end:</code></pre>
+                </div>
+                <div class="code-example abusive-mode">
+                    <pre><code>sharu:
+  loda ayia nakh umar = 25;
+  loda ayia nakh total = 10 + (15 * 20);
+  loda ayia nakh naam = "Bhai";
+  loda ayia nakh char = 'a';
+  loda ayia nakh empty = nalla;
+  loda ayia nakh flag = sachu;
+  loda ayia nakh wrong = khotu;
+samaapt:</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h2>Built-ins</h2>
+                <p>Use <span class="highlight">print:</span> in simple mode or <span class="highlight">lakh chodya:</span> in abusive mode to print anything to console.</p>
+                
+                <div class="code-example simple-mode">
+                    <pre><code>start:
+  print: "Hello World";
+  umar = 10;
+  {
+    naam = "Bhai";
+    print: umar + naam;
+  }
+end:</code></pre>
+                </div>
+                <div class="code-example abusive-mode">
+                    <pre><code>sharu:
+  lakh chodya: "Hello World";
+  loda ayia nakh umar = 10;
+  {
+    loda ayia nakh naam = "Bhai";
+    lakh chodya: umar + naam;
+  }
+samaapt:</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h2>Conditionals</h2>
+                <p>Use <span class="highlight">jo</span> for if statements, <span class="highlight">to</span> for then, and <span class="highlight">nahi to</span> for else.</p>
+                
+                <div class="code-example simple-mode">
+                    <pre><code>start:
+  umar = 20;
+  jo (umar > 18) to {
+    print: "Adult cho";
+  } nahi to {
+    print: "Balak cho";
+  }
+end:</code></pre>
+                </div>
+                <div class="code-example abusive-mode">
+                    <pre><code>sharu:
+  loda ayia nakh umar = 20;
+  jo (umar > 18) to {
+    lakh chodya: "Mota cho";
+  } nahi to {
+    lakh chodya: "Chodya balak";
+  }
+samaapt:</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h2>Loops</h2>
+                <p>Use <span class="highlight">repeat X vaar</span> to execute code multiple times.</p>
+                
+                <div class="code-example simple-mode">
+                    <pre><code>start:
+  repeat 5 vaar {
+    print: "Maja ma che";
+  }
+end:</code></pre>
+                </div>
+                <div class="code-example abusive-mode">
+                    <pre><code>sharu:
+  repeat 5 vaar {
+    lakh chodya: "Maja avi gai";
+  }
+samaapt:</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h2>Functions</h2>
+                <p>Create reusable code blocks using <span class="highlight">function</span> keyword.</p>
+                
+                <div class="code-example simple-mode">
+                    <pre><code>start:
+  function bolavo(naam) {
+    print: "Kem cho " + naam;
+  }
+  bolavo("Bhai");
+end:</code></pre>
+                </div>
+                <div class="code-example abusive-mode">
+                    <pre><code>sharu:
+  function loda_bolavo(naam) {
+    lakh chodya: "Kem cho loda " + naam;
+  }
+  loda_bolavo("Bhai");
+samaapt:</code></pre>
+                </div>
+            </div>
+
+            <div class="doc-section">
+                <h2>Arrays</h2>
+                <p>Store multiple values using <span class="highlight">list</span> in simple mode or <span class="highlight">loda ayia nakh list</span> in abusive mode.</p>
+                
+                <div class="code-example simple-mode">
+                    <pre><code>start:
+  list mitro = ["Ram", "Shyam", "Mohan"];
+  print: mitro[0];
+  print: "Total mitro: " + mitro.length;
+end:</code></pre>
+                </div>
+                <div class="code-example abusive-mode">
+                    <pre><code>sharu:
+  loda ayia nakh list lodo = ["Ram", "Shyam", "Mohan"];
+  lakh chodya: lodo[0];
+  lakh chodya: "Total lodo: " + lodo.length;
+samaapt:</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="playground.html" class="footer-link">Playground</a>
+            </div>
+            <p>Made with ❤️ by <a href="https://github.com/DDharm007" target="_blank">@DDharm007</a></p>
+        </footer>
+    </div>
+
+    <script src="interpreter.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
